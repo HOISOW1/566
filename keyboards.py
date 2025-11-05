@@ -8,9 +8,9 @@ def format_size(size: str) -> str:
     if len(size) <= 3: return size
     return f"{size[:-3]}.{size[-3:]}"
 
-def main_menu():
+def main_menu(): 
     kb = [
-        [KeyboardButton(text="Купить Гретый Сплит"), KeyboardButton(text="Купить Не Гретый Сплит")],
+        [KeyboardButton(text="Яндекс Сплит"), KeyboardButton(text="Яндекс Сплит гретый")],
         [KeyboardButton(text="Продажа eSIM")],
         [KeyboardButton(text="Мои покупки"), KeyboardButton(text="Поддержка")],
         [KeyboardButton(text="Отзывы")]  # ← БЕЗ РЕФЕРАЛКИ
@@ -40,5 +40,4 @@ def esim_menu():
 def review_button():
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="отзывы", url="https://t.me/FrontMan_Shop_rep")]
-
     ])
