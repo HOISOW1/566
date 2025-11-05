@@ -76,11 +76,11 @@ async def buy_esim(call: types.CallbackQuery):
 
 @dp.message(F.text == "Купить Гретый Сплит")
 async def buy_warm(m: types.Message):
-    await m.answer_photo(FSInputFile("warm.jpg"), "*Пакет Гретый Сплит:*", reply_markup=category_menu("Гретый"), parse_mode="Markdown")
+    await m.answer_photo(FSInputFile("warm.jpg"), "*Пакет Гретый Сплит:*", reply_markup=category_menu("Не Гретый"), parse_mode="Markdown")
 
 @dp.message(F.text == "Купить Не Гретый Сплит")
 async def buy_cold(m: types.Message):
-    await m.answer_photo(FSInputFile("cold.jpg"), "*Пакет Не Гретый Сплит:*", reply_markup=category_menu("Не Гретый"), parse_mode="Markdown")
+    await m.answer_photo(FSInputFile("cold.jpg"), "*Пакет Не Гретый Сплит:*", reply_markup=category_menu("Гретый"), parse_mode="Markdown")
 
 @dp.callback_query(F.data.startswith("buy_"))
 async def buy_split(call: types.CallbackQuery):
